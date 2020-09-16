@@ -9,9 +9,17 @@ wootware = Wootware()
 
 evetech.ssd()
 evetech.graphics_cards()
+evetech.monitors()
+evetech.keyboards()
+evetech.mice()
+evetech.cpu()
 
 wootware.ssd()
 wootware.graphics_cards()
+wootware.monitors()
+wootware.keyboards()
+wootware.mice()
+wootware.cpu()
 
 print('\nCompleted you can now Close this window')
 print('and check the folder for updated price lists')

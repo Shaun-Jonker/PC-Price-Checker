@@ -30,7 +30,7 @@ class Wootware:
 
         woot_products = sorted(zip(woot_name, woot_price, woot_saving, woot_links))
 
-        with open('Price Lists/SSD.csv', "a+", newline='') as the_file:
+        with open('../Price Lists/SSD.csv', "a+", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in woot_products:
@@ -54,7 +54,7 @@ class Wootware:
 
         woot_products = sorted(zip(woot_name, woot_price, woot_saving, woot_links))
 
-        with open('Price Lists/Graphics Cards.csv', "a+", newline='') as the_file:
+        with open('../Price Lists/Graphics Cards.csv', "a+", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in woot_products:
@@ -77,7 +77,7 @@ class Wootware:
 
         woot_products = sorted(zip(woot_name, woot_price, woot_saving, woot_links))
 
-        with open('Price Lists/Monitors.csv', "a+", newline='') as the_file:
+        with open('../Price Lists/Monitors.csv', "a+", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in woot_products:
@@ -102,7 +102,7 @@ class Wootware:
 
         woot_products = sorted(zip(woot_name, woot_price, woot_saving, woot_links))
 
-        with open('Price Lists/Keyboards.csv', "a+", newline='') as the_file:
+        with open('../Price Lists/Keyboards.csv', "a+", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in woot_products:
@@ -126,7 +126,7 @@ class Wootware:
 
         woot_products = sorted(zip(woot_name, woot_price, woot_saving, woot_links))
 
-        with open('Price Lists/Mouses.csv', "a+", newline='') as the_file:
+        with open('../Price Lists/Mouses.csv', "a+", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in woot_products:
@@ -150,7 +150,7 @@ class Wootware:
 
         woot_products = sorted(zip(woot_name, woot_price, woot_saving, woot_links))
 
-        with open('Price Lists/CPU.csv', "a+", newline='') as the_file:
+        with open('../Price Lists/CPU.csv', "a+", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in woot_products:

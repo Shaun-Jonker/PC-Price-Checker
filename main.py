@@ -1,5 +1,5 @@
-from evetech import Evetech
-from wootware import Wootware
+from modules.evetech import Evetech
+from modules.wootware import Wootware
 
 
 print("PLEASE DONT CLOSE THIS WINDOW")

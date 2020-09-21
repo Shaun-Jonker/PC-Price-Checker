@@ -18,4 +18,4 @@ foxytech = ProductSearch()
 
 
 foxytech_ssd = foxytech.foxy_search("https://www.foxytech.co.za/product-category/hardware/storage/solid-state-drives-ssd/?orderby=by_stock", "Solid State Drives")
-writer.append("Solid State Drives", foxytech_ssd)
+writer.write_to_file("Solid State Drives", foxytech_ssd)

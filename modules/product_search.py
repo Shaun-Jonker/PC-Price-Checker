@@ -7,7 +7,7 @@ class ProductSearch:
     def __init__(self):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--start-maximized")
+        chrome_options.add_argument("--window-size=1920,1080")
         self.driver = webdriver.Chrome(options=chrome_options)
 
     def eve_search(self, website, item_name):
@@ -43,28 +43,29 @@ class ProductSearch:
         return woot_products
 
     def foxy_search(self, website, item_name):
-        foxy_options = Options()
-        foxy_options.add_argument("--start-maximized")
-        self.driver = webdriver.Chrome(options=foxy_options)
 
-        self.driver.get(website)
-
-        print('Running Foxy in headless mode')
-        
         self.driver.implicitly_wait(10)
-
+        self.driver.get(website)
+        print('Running Foxy in headless mode')
         element = self.driver.find_element_by_name('ppp')
-        
-        self.driver.implicitly_wait(2)
         element.click()
+        
+        foxy_name = []
+        temp = []
 
         for i in range(4):
             element.send_keys(Keys.ARROW_DOWN)
-            self.driver.implicitly_wait(1.5)
 
         element.click()
+
         print("I got here")
-        foxy_name = [p.text for p in self.driver.find_elements_by_class_name("woocommerce-loop-product__title")]
+        foxy_names = [p.text.strip('') for p in self.driver.find_elements_by_class_name("woocommerce-loop-product__title")]
+        
+        for name in foxy_names:
+            if name == '':
+                continue
+            foxy_name.append(name)
+        
         foxy_price = [price.text for price in self.driver.find_elements_by_class_name("price")]
         foxy_link = [l.get_attribute("href") for l in self.driver.find_elements_by_class_name('woocommerce-LoopProduct-link')]
 
@@ -72,7 +73,7 @@ class ProductSearch:
         print(foxy_price)
         print(foxy_link)
 
-        foxy_products = sorted(zip(foxy_name, foxy_price, foxy_link))
+        foxy_products = zip(foxy_name, foxy_price, foxy_link)
 
         self.driver.close()
 

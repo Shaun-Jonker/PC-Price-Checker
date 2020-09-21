@@ -30,7 +30,7 @@ class Evetech:
 
         products = sorted(zip(product_names, prices, links))
 
-        with open('Price Lists/SSD.csv', "w", newline='') as the_file:
+        with open('../Price Lists/SSD.csv', "w", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in products:
@@ -51,7 +51,7 @@ class Evetech:
 
         products = sorted(zip(product_names, prices, links))
 
-        with open('Price Lists/Graphics Cards.csv', "w", newline='') as the_file:
+        with open('../Price Lists/Graphics Cards.csv', "w", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in products:
@@ -73,7 +73,7 @@ class Evetech:
 
         products = sorted(zip(product_names, prices, links))
 
-        with open('Price Lists/Monitors.csv', "w", newline='') as the_file:
+        with open('../Price Lists/Monitors.csv', "w", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in products:
@@ -95,7 +95,7 @@ class Evetech:
 
         products = sorted(zip(product_names, prices, links))
 
-        with open('Price Lists/Keyboards.csv', "w", newline='') as the_file:
+        with open('../Price Lists/Keyboards.csv', "w", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in products:
@@ -117,7 +117,7 @@ class Evetech:
 
         products = sorted(zip(product_names, prices, links))
 
-        with open('Price Lists/Mouses.csv', "w", newline='') as the_file:
+        with open('../Price Lists/Mouses.csv', "w", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in products:
@@ -139,7 +139,7 @@ class Evetech:
 
         products = sorted(zip(product_names, prices, links))
 
-        with open('Price Lists/CPU.csv', "w", newline='') as the_file:
+        with open('../Price Lists/CPU.csv', "w", newline='') as the_file:
             csv.register_dialect("custom", delimiter=",")
             writer = csv.writer(the_file, dialect="custom")
             for item in products:

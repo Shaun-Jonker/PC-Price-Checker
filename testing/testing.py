@@ -1,10 +1,6 @@
 from modules.product_search import ProductSearch
 from modules.writer import Writer
 
-
-print("PLEASE DONT CLOSE THIS WINDOW")
-print("FETCHING UPDATED PRODUCTS AND PRICES\n")
-
 writer = Writer()
 
 evetech = ProductSearch()
@@ -50,5 +46,3 @@ writer.append('Monitors', wootware_Monitors)
 writer.append('Monitors', foxytech_Monitors)
 
 
-print('\nCompleted you can now Close this window')
-print('and check the folder for updated price lists')

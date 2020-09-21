@@ -44,37 +44,33 @@ class ProductSearch:
 
     def foxy_search(self, website, item_name):
 
-        self.driver.implicitly_wait(10)
         self.driver.get(website)
-        print('Running Foxy in headless mode')
+        print('Running Foxytech in headless mode')
         element = self.driver.find_element_by_name('ppp')
         element.click()
-        
-        foxy_name = []
-        temp = []
 
         for i in range(4):
             element.send_keys(Keys.ARROW_DOWN)
 
         element.click()
 
-        print("I got here")
         foxy_names = [p.text.strip('') for p in self.driver.find_elements_by_class_name("woocommerce-loop-product__title")]
-        
+
+        foxy_name = []
         for name in foxy_names:
             if name == '':
                 continue
             foxy_name.append(name)
         
         foxy_price = [price.text for price in self.driver.find_elements_by_class_name("price")]
-        foxy_link = [l.get_attribute("href") for l in self.driver.find_elements_by_class_name('woocommerce-LoopProduct-link')]
+        foxy_links = [l.get_attribute("href") for l in self.driver.find_elements_by_css_selector(".owl-item>.product .woocommerce-LoopProduct-link, .products>.product .woocommerce-LoopProduct-link")]
+        foxy_link = list(dict.fromkeys(foxy_links))
 
-        print(foxy_name)
-        print(foxy_price)
-        print(foxy_link)
+        print(f"Found {len(foxy_name)} {item_name} Products")
 
-        foxy_products = zip(foxy_name, foxy_price, foxy_link)
+        foxy_products = sorted(zip(foxy_name, foxy_price, foxy_link))
 
-        self.driver.close()
+        print(f"Finished Foxytexh {item_name} Collection")
+
 
         return foxy_products

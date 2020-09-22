@@ -10,7 +10,7 @@ class Writer:
             writer = csv.writer(the_file, dialect="custom")
             for item in product_list:
                 writer.writerow(item)
-        print("=====Writing to file complete=====\n")
+        print(f"=====Writing {file} to file complete=====\n")
 
     def append (self, file, product_list):
 
@@ -19,5 +19,5 @@ class Writer:
             writer = csv.writer(the_file, dialect="custom")
             for item in product_list:
                 writer.writerow(item)
-        print("=====Writing to file complete=====\n")
+        print(f"=====Writing {file} to file complete=====\n")
 

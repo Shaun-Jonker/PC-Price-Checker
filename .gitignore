@@ -1,9 +1,12 @@
 
 !/testing/testing.py
-!/Price Lists/
 !/modules/wootware.py
 !/modules/evetech.py
 !/modules/foxytech.py
 !/testing/
 !/.idea/
 .idea/inspectionProfiles/profiles_settings.xml
+!/Price Lists/
+*.csv
+modules/__pycache__/product_search.cpython-37.pyc
+modules/__pycache__/writer.cpython-37.pyc

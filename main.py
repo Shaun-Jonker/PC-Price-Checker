@@ -61,5 +61,16 @@ writer.write_to_file("CPUs", evetech_cpu)
 writer.append("CPUs", wootware_cpu)
 writer.append("CPUs", foxytech_cpu)
 
+# motherboard Web Data
+evetech_motherboard = evetech.eve_search('https://www.evetech.co.za/components/cheap-intel-amd-based-motherboards-19.aspx', "motherboard")
+wootware_motherboard = wootware.woot_search('https://www.wootware.co.za/computer-hardware/motherboards/shopby/in_stock_with_wootware', 'motherboard')
+foxytech_motherboard = foxytech.foxy_search("https://www.foxytech.co.za/product-category/hardware/computer-components/motherboards/?orderby=by_stock", "motherboard")
+
+
+# Write motherboard Data
+writer.write_to_file("MotherBoards", evetech_motherboard)
+writer.append("MotherBoards", wootware_motherboard)
+writer.append("MotherBoards", foxytech_motherboard)
+
 print('\nCompleted you can now Close this window')
 print('and check the folder for updated price lists')

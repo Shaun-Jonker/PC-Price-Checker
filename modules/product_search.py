@@ -21,7 +21,7 @@ class ProductSearch:
         print(f"Found {len(product_names)} {item_name} Products")
 
         products = sorted(zip(product_names, prices, links))
-        print(f"Finished Evetech {item_name} Collection")
+        print(f"Finished Evetech {item_name} Collection\n")
         return products
 
     def woot_search(self, website, item_name):
@@ -38,7 +38,7 @@ class ProductSearch:
         print(f"Found {len(woot_name)} {item_name} Products")
 
         woot_products = sorted(zip(woot_name, woot_price, woot_saving, woot_links))
-        print(f"Finished Wootware {item_name} Collection")
+        print(f"Finished Wootware {item_name} Collection\n")
 
         return woot_products
 
@@ -70,7 +70,7 @@ class ProductSearch:
 
         foxy_products = sorted(zip(foxy_name, foxy_price, foxy_link))
 
-        print(f"Finished Foxytexh {item_name} Collection")
+        print(f"Finished Foxytexh {item_name} Collection\n")
 
 
         return foxy_products

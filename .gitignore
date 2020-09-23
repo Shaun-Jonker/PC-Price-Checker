@@ -10,3 +10,4 @@
 *.csv
 modules/__pycache__/product_search.cpython-37.pyc
 modules/__pycache__/writer.cpython-37.pyc
+testing/testing.py

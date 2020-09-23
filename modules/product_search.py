@@ -74,3 +74,20 @@ class ProductSearch:
 
 
         return foxy_products
+
+    def titan_search(self, website, item_name):
+
+        self.driver.get(website + "?features_hash=174-Y&items_per_page=96")
+        print('Running TitanIce in headless mode')
+
+        titanice_names = [name.get_attribute('title') for name in self.driver.find_elements_by_class_name('product-title')]
+        titanice_price = [price.text for price in self.driver.find_elements_by_class_name('ty-grid-list__price')]
+        titanice_links =[link.get_attribute('href') for link in self.driver.find_elements_by_class_name('product-title')]
+
+        print(f"Found {len(titanice_names)} {item_name} Products")
+
+        titanice_products = sorted(zip(titanice_names, titanice_price, titanice_links))
+
+        print(f"Finished TitanIce {item_name} Collection\n")
+
+        return titanice_products

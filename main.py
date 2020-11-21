@@ -49,6 +49,7 @@ foxytech_Monitors = foxytech.foxy_search('https://www.foxytech.co.za/product-cat
 titanice_Monitors = titanice.titan_search('https://www.titan-ice.co.za/peripherals/monitors/', "Monitors")
 
 
+<<<<<<< Updated upstream
 # Write Monitor data to File
 writer.write_to_file("Monitors", evetech_Monitors)
 writer.append('Monitors', wootware_Monitors)
@@ -84,3 +85,5 @@ writer.append("Motherboards", titanice_motherboard)
 
 print('\nCompleted you can now Close this window')
 print('and check the folder for updated price lists')
+=======
+>>>>>>> Stashed changes

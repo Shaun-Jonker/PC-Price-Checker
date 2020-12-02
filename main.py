@@ -85,5 +85,4 @@ writer.append("Motherboards", titanice_motherboard)
 
 print('\nCompleted you can now Close this window')
 print('and check the folder for updated price lists')
-=======
->>>>>>> Stashed changes
+
